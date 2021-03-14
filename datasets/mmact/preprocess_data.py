@@ -35,7 +35,7 @@ def get_configuration() -> argparse.Namespace:
                              "E.g. skeleton/rgb are captured with 30FPS -> Reduce to 10FPS")
     parser.add_argument("-w", "--wearable_sensors", nargs="+",
                         default=("gyro_clip", "orientation_clip", "acc_phone_clip", "acc_watch_clip"),
-                        help="Which wearable sensor modalities to use. "
+                        help="Which wearable sensor modalities to use. Note as non-comma seperated list e.g acc_phone_clip acc_watch_clip."
                              "The order is important: Resample the length of all other sensor modalities "
                              "to that of the first element in this list.")
     parser.add_argument("--debug", action="store_true", help="debug mode")
